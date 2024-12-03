@@ -1,4 +1,4 @@
-interface IListRepository
+public interface IListRepository
 {
     public Task<List<ListEntity>?> GetAllLists();
     public Task<ListEntity?> FindListById(Guid id);

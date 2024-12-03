@@ -1,7 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 
-class UpdateListsUsecase
+public class UpdateListsUsecase
 {
     private readonly IListRepository repository;
 

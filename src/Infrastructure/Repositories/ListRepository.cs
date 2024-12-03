@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-class ListRepository : IListRepository
+public class ListRepository : IListRepository
 {
     private readonly AppDbContext context;
 

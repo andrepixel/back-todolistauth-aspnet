@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-class UserEntity(Guid id, string name, string email, string password, bool isVip, DateTime createdAt)
+public class UserEntity(Guid id, string name, string email, string password, bool isVip, DateTime createdAt)
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public Guid Id { get; set; } = id;

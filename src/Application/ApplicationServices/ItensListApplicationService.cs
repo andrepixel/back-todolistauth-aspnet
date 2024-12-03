@@ -1,5 +1,5 @@
 
-class ItensListApplicationService(
+public class ItensListApplicationService(
     GetItensListUsecase getItensListUsecase, CreateItemListUsecase createItemListUsecase, FindItemListUsecase findItemListUsecase, UpdateItemListUsecase updateItemListUsecase, DeleteItemListUsecase deleteItemListUsecase, FindListUsecase findListUsecase
     )
 {

@@ -1,4 +1,4 @@
-class DeleteListsUsecase(IListRepository repository)
+public class DeleteListsUsecase(IListRepository repository)
 {
     private readonly IListRepository repository = repository;
 

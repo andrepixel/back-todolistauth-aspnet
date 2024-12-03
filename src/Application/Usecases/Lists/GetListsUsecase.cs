@@ -1,4 +1,4 @@
-class GetListsUsecase
+public class GetListsUsecase
 {
     private readonly IListRepository repository;
 

@@ -3,7 +3,7 @@ using AutoMapper;
 using back_todolistauth_aspnet.src.Infrastructure.Configurations.Mappers;
 using Microsoft.AspNetCore.Mvc;
 
-class UpdateItemListUsecase(IItensListRepository repository, IMapper mapper)
+public class UpdateItemListUsecase(IItensListRepository repository, IMapper mapper)
 {
     private readonly IItensListRepository repository = repository;
     private readonly IMapper mapper = mapper;

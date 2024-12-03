@@ -1,4 +1,4 @@
-class DeleteItemListUsecase
+public class DeleteItemListUsecase
 {
     private readonly IItensListRepository repository;
 

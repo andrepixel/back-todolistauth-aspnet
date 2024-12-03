@@ -1,4 +1,4 @@
-class GetItensListUsecase
+public class GetItensListUsecase
 {
     private readonly IItensListRepository repository;
 

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-class AppDbContext : DbContext
+public class AppDbContext : DbContext
 {
     // public DbSet<UserEntity> Users { get; set; }
     public DbSet<ItemListEntity> Itens { get; set; }

@@ -1,4 +1,4 @@
-class UserService
+public class UserService
 {
     
 }

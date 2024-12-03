@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("/api/lists")]
-class ItensListController : ControllerBase
+public class ItensListController : ControllerBase
 {
     private readonly ItensListApplicationService service;
 
@@ -11,7 +11,7 @@ class ItensListController : ControllerBase
         this.service = service;
     }
 
-    [HttpGet("[listId]/items")]
+    [HttpGet("[[listId]]/items")]
     public async Task<ActionResult<List<ItemListEntity>?>> GetItensList([FromQuery] Guid listId)
     {
         List<ItemListEntity>? itemListEntities = await service.GetItensList(listId);
@@ -21,7 +21,7 @@ class ItensListController : ControllerBase
         return Ok(itemListEntities);
     }
 
-    [HttpPost("[listId]")]
+    [HttpPost("[[listId]]")]
     public async Task<ActionResult<ItemListEntity?>> CreateItemList([FromQuery]Guid listId)
     {
         ItemListEntity? listEntity = await service.CreateItemList(listId);
@@ -31,7 +31,7 @@ class ItensListController : ControllerBase
         return Created("", listEntity);
     }
 
-    [HttpPatch("[listId]/item/[itemId]")]
+    [HttpPatch("[[listId]]/item/[[itemId]]")]
     public async Task<ActionResult<ItemListEntity?>> UpdateList([FromQuery] Guid listId, [FromQuery] Guid itemId, [FromBody] ItensListsResquestDTO dto)
     {
         try
@@ -48,7 +48,7 @@ class ItensListController : ControllerBase
         }
     }
 
-    [HttpDelete("[listId]/item/[itemId]")]
+    [HttpDelete("[[listId]]/item/[[itemId]]")]
     public async Task<ActionResult<ItemListEntity?>> DeleteItemList([FromQuery] Guid listId, [FromQuery] Guid itemId)
     {
         await service.DeleteItemListById(listId, itemId);

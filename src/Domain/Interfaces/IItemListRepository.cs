@@ -1,4 +1,4 @@
-interface IItensListRepository
+public interface IItensListRepository
 {
     public Task<List<ItemListEntity>?> GetAllItensList();
     public Task<ItemListEntity?> FindItemListById(Guid id);

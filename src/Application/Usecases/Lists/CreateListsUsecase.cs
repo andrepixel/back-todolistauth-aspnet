@@ -1,4 +1,4 @@
-class CreateListsUsecase(IListRepository repository)
+public class CreateListsUsecase(IListRepository repository)
 {
     private readonly IListRepository repository = repository;
 

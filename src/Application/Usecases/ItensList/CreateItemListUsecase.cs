@@ -1,4 +1,4 @@
-class CreateItemListUsecase
+public class CreateItemListUsecase
 {
     private readonly IItensListRepository repository;
 

@@ -1,5 +1,5 @@
 
-class ListApplicationService
+public class ListApplicationService
 {
     private readonly GetListsUsecase getListsUsecase;
     private readonly CreateListsUsecase createListsUsecase;

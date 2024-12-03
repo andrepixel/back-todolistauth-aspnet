@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-class ItemListEntity(string name, string description, ListEntity list)
+public class ItemListEntity(string name, string description, ListEntity list)
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public Guid Id { get; set; }

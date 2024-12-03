@@ -1,15 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 
 [ApiController]
-[Route("/api/[controller]")]
-class ListController : ControllerBase
+[Route("api/lists")]
+public class ListController(ListApplicationService service) : ControllerBase
 {
-    private readonly ListApplicationService service;
-
-    public ListController(ListApplicationService service)
-    {
-        this.service = service;
-    }
+    private readonly ListApplicationService service = service;
 
     [HttpGet]
     public async Task<ActionResult<List<ListEntity>?>> GetLists()
@@ -31,7 +27,7 @@ class ListController : ControllerBase
         return Created("", listEntity);
     }
 
-    [HttpPatch("[id]")]
+    [HttpPatch("[[id]]")]
     public async Task<ActionResult<ListEntity?>> UpdateList([FromQuery] Guid id, [FromBody] ListsResquestDTO dto)
     {
         try
@@ -48,7 +44,7 @@ class ListController : ControllerBase
         }
     }
 
-    [HttpDelete("[id]")]
+    [HttpDelete("[[id]]")]
     public async Task<ActionResult<ListEntity?>> DeleteList([FromQuery] Guid id)
     {
         await service.DeleteListById(id);

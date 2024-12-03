@@ -33,14 +33,9 @@ class ListRepository : IListRepository
         return await context.Lists.ToListAsync();
     }
 
-    public async Task<ListEntity?> GetListById(Guid id)
+    public async Task<ListEntity?> FindListById(Guid id)
     {
         return await context.Lists.FindAsync(id);
-    }
-
-    public void SetPropertyModified(ListEntity listEntity, PropertyInfo propertyInfo)
-    {
-        context.Entry(listEntity).Property(propertyInfo.Name).IsModified = true;
     }
 
     public async Task<ListEntity?> UpdateList(ListEntity listEntity)

@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Sr8pukN18FBUv+gdMgnkFqCTypql9RmHXgfo/yHK9u1NxJFfWSdt2EbTvyYZd1pJHQcxDYK3O/JzMJZ7Ax3Xxg==",
+  "dgSpecHash": "l92baLryMYAJ28PzMSgho3RaI6f7DffNlD9woQc1ci0CXYnmMvZZSk2PfGGmvrzgfz64bV7PIEo+mzseRUgBbQ==",
   "success": true,
   "projectFilePath": "/home/andre/back-todolistauth-aspnet/back-todolistauth-aspnet.csproj",
   "expectedPackageFiles": [
+    "/home/andre/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/andre/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/home/andre/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/home/andre/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/home/andre/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "/home/andre/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/home/andre/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/andre/.nuget/packages/microsoft.data.sqlclient/5.1.5/microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "/home/andre/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.1.1/microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "/home/andre/.nuget/packages/microsoft.entityframeworkcore/8.0.10/microsoft.entityframeworkcore.8.0.10.nupkg.sha512",

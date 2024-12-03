@@ -1,0 +1,1 @@
+public record ItensListsResquestDTO(string Title, string Description);

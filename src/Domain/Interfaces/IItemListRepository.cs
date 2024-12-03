@@ -1,8 +1,8 @@
-interface IItemListRepository
+interface IItensListRepository
 {
-    public Task<List<ItemListEntity>?> GetAllItens();
-    public Task<ItemListEntity?> GetItemById(Guid id);
-    public Task<ItemListEntity?> CreateItem(ItemListEntity itemListEntity);
-    public Task<ItemListEntity?> UpdateItem(ItemListEntity itemListEntity);
-    public Task<ItemListEntity?> DeleteItemById(ItemListEntity itemListEntity);
+    public Task<List<ItemListEntity>?> GetAllItensList();
+    public Task<ItemListEntity?> FindItemListById(Guid id);
+    public Task<ItemListEntity?> CreateItemList(ItemListEntity itemListEntity);
+    public Task<ItemListEntity?> UpdateItemList(ItemListEntity itemListEntity);
+    public Task<ItemListEntity?> DeleteItemList(ItemListEntity itemListEntity);
 }

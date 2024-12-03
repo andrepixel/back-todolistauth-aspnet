@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("/api/[controller]")]
-class ListsController : ControllerBase
+class ListController : ControllerBase
 {
-    private readonly ListsService service;
+    private readonly ListApplicationService service;
 
-    public ListsController(ListsService service)
+    public ListController(ListApplicationService service)
     {
         this.service = service;
     }
@@ -22,12 +22,37 @@ class ListsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<ListEntity?>> CreatList()
+    public async Task<ActionResult<ListEntity?>> CreateList()
     {
         ListEntity? listEntity = await service.CreateList();
 
         if (listEntity == null) return NotFound();
 
         return Created("", listEntity);
+    }
+
+    [HttpPatch("[id]")]
+    public async Task<ActionResult<ListEntity?>> UpdateList([FromQuery] Guid id, [FromBody] ListsResquestDTO dto)
+    {
+        try
+        {
+            ListEntity? listEntity = await service.UpdateList(id, dto);
+
+            if (listEntity == null) return NotFound();
+
+            return Ok(listEntity);
+        }
+        catch (PropertiesEqualsException exception)
+        {
+            return Ok(exception.Message);
+        }
+    }
+
+    [HttpDelete("[id]")]
+    public async Task<ActionResult<ListEntity?>> DeleteList([FromQuery] Guid id)
+    {
+        await service.DeleteListById(id);
+
+        return NoContent();
     }
 }

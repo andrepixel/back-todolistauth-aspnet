@@ -1,11 +1,16 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-class ItemListEntity
+class ItemListEntity(string name, string description, ListEntity list)
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public Guid Id { get; set; }
-    public required String Name { get; set; }
-    public required String Description { get; set; }
-    public required ListEntity List { get; set; }
+
+    public string Title { get; set; } = name;
+
+    public string Description { get; set; } = description;
+
+    public ListEntity List { get; set; } = list;
+
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public DateTime CreatedAt { get; set; }
 }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 class AppDbContext : DbContext
 {
     public DbSet<UserEntity> Users { get; set; }
-    public DbSet<ItemListEntity> Items { get; set; }
+    public DbSet<ItemListEntity> Itens { get; set; }
     public DbSet<ListEntity> Lists { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
@@ -13,9 +13,9 @@ class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<ItemListEntity>()
-        .HasOne(list => list.List)
-        .WithMany(list => list.Itens);
+       modelBuilder.Entity<ListEntity>()
+        .HasMany(list => list.Itens)
+        .WithOne(item => item.List)
+        .HasForeignKey(item => item.List);
     }
-
 }

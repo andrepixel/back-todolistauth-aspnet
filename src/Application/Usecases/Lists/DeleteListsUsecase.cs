@@ -1,11 +1,6 @@
-class DeleteListsUsecase
+class DeleteListsUsecase(IListRepository repository)
 {
-    private readonly IItensListRepository repository;
-
-    public DeleteListsUsecase(IItensListRepository repository)
-    {
-        this.repository = repository;
-    }
+    private readonly IListRepository repository = repository;
 
     public async Task<ListEntity?> DeleteListById(ListEntity listEntity)
     {

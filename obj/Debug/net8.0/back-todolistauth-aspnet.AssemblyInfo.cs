@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("back-todolistauth-aspnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f762f2ff38dcfe7d2d1f72c0ce27300588adf104")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a05364542d67bad5780fc04b48e2fb3783261ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("back-todolistauth-aspnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("back-todolistauth-aspnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

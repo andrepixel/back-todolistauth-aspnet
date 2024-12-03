@@ -2,9 +2,11 @@ using Microsoft.EntityFrameworkCore;
 
 class AppDbContext : DbContext
 {
-    public DbSet<UserEntity> Users { get; set; }
+    // public DbSet<UserEntity> Users { get; set; }
     public DbSet<ItemListEntity> Itens { get; set; }
     public DbSet<ListEntity> Lists { get; set; }
+
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
     protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
     {

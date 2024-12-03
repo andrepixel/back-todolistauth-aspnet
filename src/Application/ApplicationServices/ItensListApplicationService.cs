@@ -1,12 +1,14 @@
 
-class ItensListApplicationService
+class ItensListApplicationService(
+    GetItensListUsecase getItensListUsecase, CreateItemListUsecase createItemListUsecase, FindItemListUsecase findItemListUsecase, UpdateItemListUsecase updateItemListUsecase, DeleteItemListUsecase deleteItemListUsecase, FindListUsecase findListUsecase
+    )
 {
-    private readonly GetItensListUsecase getItensListUsecase;
-    private readonly CreateItemListUsecase createItemListUsecase;
-    private readonly FindItemListUsecase findItemListUsecase;
-    private readonly UpdateItemListUsecase updateItemListUsecase;
-    private readonly DeleteItemListUsecase deleteItemListUsecase;
-    private readonly FindListUsecase findListUsecase;
+    private readonly GetItensListUsecase getItensListUsecase = getItensListUsecase;
+    private readonly CreateItemListUsecase createItemListUsecase = createItemListUsecase;
+    private readonly FindItemListUsecase findItemListUsecase = findItemListUsecase;
+    private readonly UpdateItemListUsecase updateItemListUsecase = updateItemListUsecase;
+    private readonly DeleteItemListUsecase deleteItemListUsecase = deleteItemListUsecase;
+    private readonly FindListUsecase findListUsecase = findListUsecase;
 
     public async Task<List<ItemListEntity>?> GetItensList(Guid listId)
     {

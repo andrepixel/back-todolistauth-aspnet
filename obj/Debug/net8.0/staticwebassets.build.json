@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9jWNfpxGeghnA5kcsRps1BzVKyAWXZZk0rdqaUE9iCg=",
+  "Source": "back-todolistauth-aspnet",
+  "BasePath": "_content/back-todolistauth-aspnet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

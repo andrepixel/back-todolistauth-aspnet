@@ -1,14 +1,9 @@
-class CreateListsUsecase
+class CreateListsUsecase(IListRepository repository)
 {
-    private readonly IItensListRepository repository;
-
-    public CreateListsUsecase(IItensListRepository repository)
-    {
-        this.repository = repository;
-    }
+    private readonly IListRepository repository = repository;
 
     public async Task<ListEntity?> CreateList()
     {
-        return await repository.CreateList(new ItemListEntity(name: "Nova Tarefa", null));
+        return await repository.CreateList(new ListEntity(name: "Nova Tarefa", null));
     }
 }
